@@ -420,8 +420,8 @@ Redfive.touchMouse({
 ```
 Option|Type|Description         |Required?
 :----:|:---:|:-----------------:|:-------:
-value|string or num|item you're storing in the array|yes
-getList |function|access to array `myList[i].value` |yes
+touch|function|use when touchevent is in window|yes
+mouse|function|use when mouseevent is in window|yes
 
 ##The End
 Wanna get involved and make RedFive better?  G'head and jump in feet first.  Until then, go forth and build cool stuff!
