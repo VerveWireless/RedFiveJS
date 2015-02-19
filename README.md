@@ -306,7 +306,7 @@ Detects when elements collide.  Primarily used when elements need to interact wi
 
 ```javascript
 Redfive.collide(element, {
-  secondaryEl: secondaryElement,
+  movedElement: secondaryElement,
   onCollide: function() {
     // do stuff when both elements collide
   }
