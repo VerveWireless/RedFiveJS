@@ -260,7 +260,7 @@ callback|function|runs after transition|no
 callbackDelay|ms|delay your callback if needed|no
 
 ### Gaming & Other Neat Stuff
-####Note: All of the following methods will log additional details in the console.
+#####Note: All of the following methods will log additional details in the console.
 
 #### Timer
 Creates a game timer.
