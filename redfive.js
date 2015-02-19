@@ -216,7 +216,7 @@
     };
 
     // collide
-    // ammo: secondaryEl, onCollide
+    // ammo: movedElement, onCollide
     Redfive.collide = function(element, ammo) {
       var checkCollide = function() {
         var rect1 = element.getBoundingClientRect();
