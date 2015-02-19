@@ -316,7 +316,7 @@ Redfive.collide(element, {
 Option|Type|Description         |Required?
 :----:|:---:|:-----------------:|:-------:
 element|var|first HTML element| yes
-secondaryEl|var|second HTML element|yes
+movedElement|var|second HTML element being moved|yes
 onCollide |function|fires when elements collide |yes
 
 #### AJAX Requests
