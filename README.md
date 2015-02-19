@@ -1,5 +1,3 @@
-### Code Coming Soon...stay tuned!
-
 # RedFiveJS
 A lightweight creative toolkit for AdDev.  Designed to make animations, transitions and gaming functionality easier to build and faster to deploy.  
 
@@ -48,6 +46,7 @@ Not bad huh?  Ok let's dig in.
 We're gonna cover a wide variety of use cases and all of the possible configurations thereof.  If you're hungry, or need a bathroom break, now's the time.  No?  Ok then, here we go.
 
 ### Animations & Transitions
+#####Note: All of the animations and transitions are hardware accelerated.
 
 #### Blur
 
@@ -307,7 +306,7 @@ Detects when elements collide.  Primarily used when elements need to interact wi
 
 ```javascript
 Redfive.collide(element, {
-  secondaryEl: secondaryElement,
+  movedElement: secondaryElement,
   onCollide: function() {
     // do stuff when both elements collide
   }
@@ -317,7 +316,7 @@ Redfive.collide(element, {
 Option|Type|Description         |Required?
 :----:|:---:|:-----------------:|:-------:
 element|var|first HTML element| yes
-secondaryEl|var|second HTML element|yes
+movedElement|var|second HTML element being moved|yes
 onCollide |function|fires when elements collide |yes
 
 #### AJAX Requests
@@ -422,8 +421,12 @@ Redfive.touchMouse({
 ```
 Option|Type|Description         |Required?
 :----:|:---:|:-----------------:|:-------:
-value|string or num|item you're storing in the array|yes
-getList |function|access to array `myList[i].value` |yes
+touch|function|use when touchevent is in window|yes
+mouse|function|use when mouseevent is in window|yes
 
-##The End
+##Roadmap
+* Canvas Support
+* Bridge Support
+* Chaining (Fire multiple transitions, etc. back-to-back)
+
 Wanna get involved and make RedFive better?  G'head and jump in feet first.  Until then, go forth and build cool stuff!
