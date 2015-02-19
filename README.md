@@ -260,6 +260,7 @@ callback|function|runs after transition|no
 callbackDelay|ms|delay your callback if needed|no
 
 ### Gaming & Other Neat Stuff
+####Note: All of the following methods will log additional details in the console.
 
 #### Timer
 Creates a game timer.
@@ -320,7 +321,7 @@ movedElement|var|second HTML element being moved|yes
 onCollide |function|fires when elements collide |yes
 
 #### AJAX Requests
-Makes quick and easy calls to get data.
+Makes quick and easy calls to get data. (JSON)
 
 ```javascript
 Redfive.request({
