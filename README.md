@@ -46,6 +46,7 @@ Not bad huh?  Ok let's dig in.
 We're gonna cover a wide variety of use cases and all of the possible configurations thereof.  If you're hungry, or need a bathroom break, now's the time.  No?  Ok then, here we go.
 
 ### Animations & Transitions
+#####Note: All of the animations and transitions are hardware accelerated.
 
 #### Blur
 
