@@ -423,5 +423,9 @@ Option|Type|Description         |Required?
 touch|function|use when touchevent is in window|yes
 mouse|function|use when mouseevent is in window|yes
 
-##The End
+##Roadmap
+* Canvas Support
+* Bridge Support
+* Chaining (Fire multiple transitions, etc. back-to-back)
+
 Wanna get involved and make RedFive better?  G'head and jump in feet first.  Until then, go forth and build cool stuff!
