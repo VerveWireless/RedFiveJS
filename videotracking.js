@@ -54,7 +54,7 @@ Redfive = (function(Redfive) {
   // ammo: ad, video, optional duration
   Redfive.Video.track = function(ammo) {
     var video = ammo.video;
-    if(!video || !(video instanceof HTMLMediaElement)) {
+    if(!video || !video.play || !video.pause) {
       throw new Error("ammo.video must be HTMLMediaElement");
     }
 
