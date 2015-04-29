@@ -299,6 +299,37 @@
       }
     };
 
+    // send SMS
+    // ammo: to, body, onSend
+    Redfive.sms = function(ammo) {
+      var url = 'sms:';
+      if(ammo.to) {
+        url += ammo.to;
+      }
+      function send() {
+        window.location.href = url;
+        if(ammo.onSend && typeof ammo.onSend === 'function') {
+          ammo.onSend();
+        }
+        console.log('RedFive[SMS]: SMS created');
+      }
+      Redfive.detectOS({
+        ios: function() {
+          // iOS doesn't play nicely with the body parameter
+          send();
+        },
+        android: function() {
+          if(ammo.body) {
+            url += "?body=" + encodeURIComponent(ammo.body);
+          }
+          send();
+        },
+        desktop: function() {
+          console.log('Redfive[SMS]: Desktop SMS: ', ammo);
+        }
+      });
+    };
+
     // create a list obj
     // ammo: value, getList
     var list = [];
