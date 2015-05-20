@@ -78,6 +78,9 @@ Redfive = (function(Redfive) {
           }
         });
       }
+      else {
+        trackVideo(ad, video, duration);
+      }
     }
   };
 
