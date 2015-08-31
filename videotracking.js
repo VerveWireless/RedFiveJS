@@ -2,7 +2,7 @@ Redfive = (function(Redfive) {
   Redfive.Video = Redfive.Video || {};
 
 
-  function trackVideo(ad, video, duration) {
+  function trackVideo(ad, video, duration, trackCallback) {
     var highestInterval = -1;
 
     video.addEventListener("click", function() {
@@ -40,6 +40,9 @@ Redfive = (function(Redfive) {
       // we should only send a given interval once, and if it's the highest
       if(interval > highestInterval) {
         highestInterval = interval;
+        if(trackCallback) {
+          trackCallback(interval);
+        }
         ad.logger.track("video" + interval);
       }
     });
@@ -51,7 +54,7 @@ Redfive = (function(Redfive) {
 
   // Add Verve CTA tracking to video elements
   // if duration isn't specified, pull it from video element
-  // ammo: ad, video, optional duration
+  // ammo: ad, video, optional duration, optional trackCallback called on each tracking event
   Redfive.Video.track = function(ammo) {
     var video = ammo.video;
     if(!video || !video.play || !video.pause) {
@@ -74,12 +77,12 @@ Redfive = (function(Redfive) {
       if(duration === 0 || isNaN(duration)) {
         video.addEventListener("durationchange", function() {
           if(video.duration > 0) {
-            trackVideo(ad, video, video.duration);
+            trackVideo(ad, video, video.duration, ammo.trackCallback);
           }
         });
       }
       else {
-        trackVideo(ad, video, duration);
+        trackVideo(ad, video, duration, ammo.trackCallback);
       }
     }
   };
